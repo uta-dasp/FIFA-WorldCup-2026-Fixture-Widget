@@ -1,0 +1,33 @@
+Categories:
+  - Sports & Health
+License: MIT
+AuthorName: uta-dasp
+SourceCode: https://github.com/uta-dasp/FIFA-WorldCup-2026-Fixture-Widget
+IssueTracker: https://github.com/uta-dasp/FIFA-WorldCup-2026-Fixture-Widget/issues
+
+AutoName: FIFA WorldCup 2026 Fixture Widget
+Summary: FIFA World Cup 2026 fixtures and home-screen widgets
+Description: |-
+  FIFA WorldCup 2026 Fixture Widget shows the FIFA World Cup 2026 fixture list
+  with schedule and score-style home-screen widgets.
+
+  The app updates once per day from the public openfootball/worldcup.json data
+  file and falls back to bundled CC0 fixture data when offline.
+
+  It contains no ads, no analytics, no account system, and no proprietary SDKs.
+
+RepoType: git
+Repo: https://github.com/uta-dasp/FIFA-WorldCup-2026-Fixture-Widget.git
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 1
+    commit: v0.1.0
+    subdir: .
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.0
+CurrentVersionCode: 1

@@ -1,0 +1,1 @@
+Initial release with World Cup 2026 fixtures, daily openfootball updates, bundled fallback data, and home-screen widgets.
