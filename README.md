@@ -18,8 +18,6 @@ Raw data file used:
 
 The openfootball project publishes its schema, data, and scripts under CC0-1.0 / public domain dedication.
 
-## F-Droid Friendly Shape
-
 - App license: MIT, see `LICENSE`
 - Bundled data: CC0-1.0, see `THIRD_PARTY_NOTICES.md`
 - Java source only
