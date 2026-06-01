@@ -2,7 +2,29 @@
 
 F-Droid normally builds and signs apps from source. Do not submit only an APK. Publish this source repository first, then submit metadata to F-Droid.
 
-## Recommended Path
+## Prepared Locally
+
+This project includes:
+
+- `fdroid/metadata/com.dasp.worldcup2026.yml`
+- `fdroid/com.dasp.worldcup2026-fdroiddata.patch`
+- `fastlane/metadata/android/en-US/` listing text
+
+A local fdroiddata checkout was also prepared at:
+
+`C:\Users\dasp\Documents\New project\fdroiddata-submission`
+
+Branch:
+
+`add-com.dasp.worldcup2026`
+
+Commit:
+
+`70ac96083 Add FIFA WorldCup 2026 Fixture Widget`
+
+`fdroid lint com.dasp.worldcup2026` passed locally. The only warnings were local environment warnings unrelated to the app metadata.
+
+## Submission Path
 
 1. Push this project to a public GitHub repository.
 2. Create a tagged release, for example:
@@ -14,7 +36,7 @@ git push origin main --tags
 
 3. Create a GitLab account if you do not already have one.
 4. Fork `https://gitlab.com/fdroid/fdroiddata`.
-5. Add metadata for this app in your fdroiddata fork.
+5. Push the prepared `add-com.dasp.worldcup2026` branch to your fdroiddata fork.
 6. Open a merge request to F-Droid's fdroiddata repository.
 
 Official docs:
