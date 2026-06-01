@@ -1,0 +1,11 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/widget_score_name"
+    android:initialLayout="@layout/widget_score"
+    android:minHeight="72dp"
+    android:minWidth="180dp"
+    android:previewLayout="@layout/widget_score"
+    android:resizeMode="horizontal|vertical"
+    android:targetCellHeight="1"
+    android:targetCellWidth="3"
+    android:updatePeriodMillis="1800000"
+    android:widgetCategory="home_screen" />

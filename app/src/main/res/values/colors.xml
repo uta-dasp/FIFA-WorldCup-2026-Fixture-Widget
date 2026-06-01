@@ -1,0 +1,10 @@
+<resources>
+    <color name="ink">#101418</color>
+    <color name="muted">#5B6670</color>
+    <color name="surface">#F8FAFC</color>
+    <color name="panel">#FFFFFF</color>
+    <color name="line">#DFE7EF</color>
+    <color name="accent">#007A5E</color>
+    <color name="accent_dark">#005846</color>
+    <color name="gold">#C8942D</color>
+</resources>

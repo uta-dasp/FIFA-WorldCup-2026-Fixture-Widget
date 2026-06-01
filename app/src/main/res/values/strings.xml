@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FIFA WorldCup 2026 Fixture Widget</string>
+    <string name="widget_schedule_name">World Cup Schedule</string>
+    <string name="widget_score_name">World Cup Scores</string>
+</resources>
