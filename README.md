@@ -4,7 +4,11 @@ Native Android app for FIFA World Cup 2026 fixtures and home-screen widgets.
 
 ## Data Source
 
-This app bundles the 2026 schedule from:
+This app updates once per day from:
+
+`https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json`
+
+It also bundles a fallback copy of the 2026 schedule from:
 
 `openfootball/worldcup.json`
 
@@ -23,14 +27,16 @@ The openfootball project publishes its schema, data, and scripts under CC0-1.0 /
 - No analytics
 - No ads
 - No account system
-- No network permission
 - No user data collection
+- Network access is only used to fetch the public openfootball JSON schedule once per day
 - `minSdk 23` for Android 6.0+
 - `targetSdk 35`
 
 ## Features
 
-- Clean offline schedule UI
+- Clean schedule UI
+- Daily online refresh from openfootball
+- Bundled fallback schedule when offline
 - All fixtures view
 - Today view
 - Results view, ready for future scored data updates
@@ -40,18 +46,18 @@ The openfootball project publishes its schema, data, and scripts under CC0-1.0 /
 
 ## Build
 
-Open this folder in Android Studio and build the debug APK or release app bundle.
+Open this folder in Android Studio and build the debug or release APK.
 
 If Gradle and the Android SDK are available locally:
 
 ```powershell
-.\gradlew :app:assembleDebug
+.\gradlew :app:assembleRelease
 ```
 
-The generated debug APK is normally written to:
+The unsigned release APK is normally written to:
 
 ```text
-app/build/outputs/apk/debug/app-debug.apk
+app/build/outputs/apk/release/app-release-unsigned.apk
 ```
 
 ## Install To A Phone
@@ -64,10 +70,10 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 ## Updating The Schedule
 
-Replace:
+Replace the bundled fallback:
 
 ```text
 app/src/main/assets/worldcup_2026.json
 ```
 
-with the latest raw JSON from openfootball, then rebuild the APK.
+with the latest raw JSON from openfootball, then rebuild the APK. The app will still try to update from the online JSON once per day at runtime.

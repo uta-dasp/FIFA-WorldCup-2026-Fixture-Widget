@@ -12,11 +12,13 @@ The app does not share user data with third parties.
 
 ## Network Activity
 
-The app has no network permission and does not make network requests.
+The app connects once per day to GitHub raw content over HTTPS to download the public openfootball World Cup 2026 JSON schedule. The app does not upload user data.
 
 ## Permissions
 
-No runtime permissions are requested.
+- Internet access: used only to fetch the public schedule JSON.
+- Network state: used by Android job scheduling for network-aware updates.
+- Boot completed: used to reschedule the daily update job after device restart.
 
 ## Security Practices
 

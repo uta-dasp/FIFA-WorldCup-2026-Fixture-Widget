@@ -12,6 +12,7 @@ import java.util.List;
 public final class ScoreWidgetProvider extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager manager, int[] appWidgetIds) {
+        AppUpdateScheduler.schedule(context);
         for (int id : appWidgetIds) {
             update(context, manager, id);
         }

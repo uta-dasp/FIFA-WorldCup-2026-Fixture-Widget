@@ -31,9 +31,11 @@ public final class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         repository = new FixtureRepository(this);
+        AppUpdateScheduler.schedule(this);
         setContentView(createContent());
         fixtures = repository.cachedFixtures();
         render();
+        refreshIfNeeded();
     }
 
     private View createContent() {
@@ -45,7 +47,7 @@ public final class MainActivity extends Activity {
         TextView title = text("FIFA World Cup 2026", 25, R.color.ink, true);
         root.addView(title, matchWrap());
 
-        TextView subtitle = text("Offline fixtures and home-screen widgets", 14, R.color.muted, false);
+        TextView subtitle = text("Daily openfootball updates and home-screen widgets", 14, R.color.muted, false);
         subtitle.setPadding(0, dp(4), 0, dp(14));
         root.addView(subtitle, matchWrap());
 
@@ -76,6 +78,37 @@ public final class MainActivity extends Activity {
         scroll.addView(list, matchWrap());
         root.addView(scroll, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
         return root;
+    }
+
+    private void refreshIfNeeded() {
+        if (!repository.isStale()) {
+            return;
+        }
+        status.setText("Checking for today's schedule update...");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    final List<Fixture> updated = repository.refreshIfStale();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            fixtures = updated;
+                            render();
+                        }
+                    });
+                } catch (Exception exception) {
+                    repository.saveError(exception.getMessage());
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            fixtures = repository.cachedFixtures();
+                            render();
+                        }
+                    });
+                }
+            }
+        }).start();
     }
 
     private Button filterButton(String label, final String value) {

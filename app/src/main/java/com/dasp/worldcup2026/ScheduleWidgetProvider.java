@@ -11,6 +11,7 @@ import android.widget.RemoteViews;
 public final class ScheduleWidgetProvider extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager manager, int[] appWidgetIds) {
+        AppUpdateScheduler.schedule(context);
         for (int appWidgetId : appWidgetIds) {
             update(context, manager, appWidgetId);
         }

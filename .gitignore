@@ -3,6 +3,8 @@
 *.ap_
 *.dex
 *.class
+*.jks
+*.keystore
 .gradle/
 .idea/
 build/
