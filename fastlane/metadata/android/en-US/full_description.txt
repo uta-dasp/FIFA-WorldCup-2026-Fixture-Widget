@@ -1,6 +1,8 @@
-FIFA WorldCup 2026 Fixture Widget shows the FIFA World Cup 2026 fixture list with schedule and score-style home-screen widgets.
+2026 Football Fixtures Widget shows the 2026 international football tournament fixture list with schedule and score-style home-screen widgets.
 
 The app updates once per day from the public openfootball/worldcup.json data file and falls back to bundled CC0 fixture data when offline.
+
+This is an unofficial fan app. It is not affiliated with, endorsed by, or sponsored by FIFA, the tournament organizers, or any football federation.
 
 Features:
 - Daily schedule refresh

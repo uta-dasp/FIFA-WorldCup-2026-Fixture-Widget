@@ -18,7 +18,7 @@
             android:layout_weight="1"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="World Cup Schedule"
+            android:text="2026 Football Schedule"
             android:textColor="@color/ink"
             android:textSize="15sp"
             android:textStyle="bold" />

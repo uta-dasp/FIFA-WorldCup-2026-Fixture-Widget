@@ -7,7 +7,6 @@ F-Droid normally builds and signs apps from source. Do not submit only an APK. P
 This project includes:
 
 - `fdroid/metadata/com.dasp.worldcup2026.yml`
-- `fdroid/com.dasp.worldcup2026-fdroiddata.patch`
 - `fastlane/metadata/android/en-US/` listing text
 
 A local fdroiddata checkout was also prepared at:
@@ -17,10 +16,6 @@ A local fdroiddata checkout was also prepared at:
 Branch:
 
 `add-com.dasp.worldcup2026`
-
-Commit:
-
-`70ac96083 Add FIFA WorldCup 2026 Fixture Widget`
 
 `fdroid lint com.dasp.worldcup2026` passed locally. The only warnings were local environment warnings unrelated to the app metadata.
 
@@ -56,12 +51,7 @@ AuthorName: uta-dasp
 SourceCode: https://github.com/uta-dasp/FIFA-WorldCup-2026-Fixture-Widget
 IssueTracker: https://github.com/uta-dasp/FIFA-WorldCup-2026-Fixture-Widget/issues
 
-AutoName: FIFA WorldCup 2026 Fixture Widget
-Summary: FIFA World Cup 2026 fixtures and home-screen widgets
-Description: |-
-  FIFA WorldCup 2026 Fixture Widget shows the 2026 World Cup fixture list
-  with home-screen widgets. It updates once per day from the public
-  openfootball/worldcup.json schedule and falls back to bundled CC0 data.
+AutoName: 2026 Football Fixtures Widget
 
 RepoType: git
 Repo: https://github.com/uta-dasp/FIFA-WorldCup-2026-Fixture-Widget.git
@@ -69,8 +59,8 @@ Repo: https://github.com/uta-dasp/FIFA-WorldCup-2026-Fixture-Widget.git
 Builds:
   - versionName: 0.1.0
     versionCode: 1
-    commit: v0.1.0
-    subdir: .
+    commit: <full source commit hash>
+    subdir: app
     gradle:
       - yes
 

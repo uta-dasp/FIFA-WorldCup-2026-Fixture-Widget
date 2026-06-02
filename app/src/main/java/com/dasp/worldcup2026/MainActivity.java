@@ -44,7 +44,7 @@ public final class MainActivity extends Activity {
         root.setBackgroundColor(color(R.color.surface));
         root.setPadding(dp(18), dp(18), dp(18), dp(12));
 
-        TextView title = text("FIFA World Cup 2026", 25, R.color.ink, true);
+        TextView title = text("2026 Football Fixtures", 25, R.color.ink, true);
         root.addView(title, matchWrap());
 
         TextView subtitle = text("Daily openfootball updates and home-screen widgets", 14, R.color.muted, false);

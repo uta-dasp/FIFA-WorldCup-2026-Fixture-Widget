@@ -1,6 +1,6 @@
-# FIFA WorldCup 2026 Fixture Widget
+# 2026 Football Fixtures Widget
 
-Native Android app for FIFA World Cup 2026 fixtures and home-screen widgets.
+Native Android app for 2026 international football fixtures and home-screen widgets.
 
 ## Data Source
 
@@ -31,6 +31,8 @@ The openfootball project publishes its schema, data, and scripts under CC0-1.0 /
 - Network access is only used to fetch the public openfootball JSON schedule once per day
 - `minSdk 23` for Android 6.0+
 - `targetSdk 35`
+
+This is an unofficial fan app. It is not affiliated with, endorsed by, or sponsored by FIFA, the tournament organizers, or any football federation.
 
 ## Features
 

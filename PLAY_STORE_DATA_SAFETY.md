@@ -12,7 +12,7 @@ The app does not share user data with third parties.
 
 ## Network Activity
 
-The app connects once per day to GitHub raw content over HTTPS to download the public openfootball World Cup 2026 JSON schedule. The app does not upload user data.
+The app connects once per day to GitHub raw content over HTTPS to download the public openfootball 2026 football tournament JSON schedule. The app does not upload user data.
 
 ## Permissions
 
@@ -34,4 +34,4 @@ The app connects once per day to GitHub raw content over HTTPS to download the p
 
 ## Bundled Data
 
-The FIFA World Cup 2026 schedule is bundled from `openfootball/worldcup.json`, which is published under CC0-1.0 / public domain dedication.
+The 2026 football schedule is bundled from `openfootball/worldcup.json`, which is published under CC0-1.0 / public domain dedication.
